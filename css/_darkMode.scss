@@ -1,0 +1,124 @@
+body {
+  &.darkMode {
+    --bg-color: #1d1f1f;
+    --text-color: #fff;
+    background-color: #141414;
+    .about-section,
+    header,
+    .news-section,
+    .contact-section {
+      background-color: #141414;
+    }
+    header {
+      &::after {
+        background-color: #1d1f1f;
+      }
+    }
+    .logo {
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+    .mode-switch {
+      .handle {
+        @include md {
+          box-shadow: 0px 2px 6px 2px rgba(255, 255, 255, 0.149);
+        }
+      }
+    }
+    .menu-btn {
+      img {
+        filter: invert(1);
+      }
+    }
+    .nav-list {
+      a {
+        color: #fff;
+        fill: #fff;
+        &:hover {
+          color: $main;
+          fill: $main;
+        }
+        &.active {
+          color: $main;
+          fill: $main;
+        }
+      }
+    }
+
+    .nav-sublist {
+      background-color: #1d1f1f;
+      box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 0.1);
+      @include md {
+        box-shadow: none;
+      }
+      &::after {
+        border-color: transparent transparent #1d1f1f transparent;
+      }
+      li {
+        a {
+          color: #fff;
+          &:hover {
+            color: $main;
+          }
+        }
+      }
+    }
+    .about-img {
+      .about-logo {
+        background-color: $back;
+        box-shadow: 0px 4px 12px 0px rgba(255, 255, 255, 0.078);
+      }
+    }
+    .about-summary {
+      color: #eeeeee;
+    }
+
+    .service-item {
+      border: 2px solid #333;
+      background-color: #141414;
+      .service-summary {
+        color: #eeeeee;
+      }
+    }
+
+    .project-item {
+      .project-name {
+        color: #000;
+        a {
+          color: #000;
+          &:hover {
+            color: $main;
+          }
+        }
+      }
+    }
+
+    .news-item {
+      background-color: #1d1f1f;
+      @include xs {
+        border: 2px solid #333;
+      }
+      .number {
+        color: #eeeeee;
+      }
+    }
+
+    .custom-input {
+      background-color: #1d1f1f;
+      border-color: #333;
+      &::placeholder {
+        color: #eee;
+      }
+      &:focus {
+        border-color: $main;
+      }
+    }
+
+    @include md {
+      .header-nav {
+        background-color: $back;
+      }
+    }
+  }
+}
