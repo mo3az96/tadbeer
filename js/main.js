@@ -1,5 +1,9 @@
 $(window).on("load", function () {
-  $("body").removeClass("overflow");
+  $(".preloader").fadeOut("500", function () {
+    $(this).remove();
+    $("body").removeClass("overflow");
+  });
+
   var checked = localStorage.getItem("mode");
   document.body.classList.add(checked);
   if (checked == "darkMode") {
@@ -57,6 +61,34 @@ $(document).ready(function () {
       clickable: true,
     },
   });
+  /************************************ States Counter ************************************/
+  if ($(".achievements-section").length > 0) {
+    var a = 0;
+    $(window).scroll(function () {
+      if (
+        a == 0 &&
+        $(this).scrollTop() >= $(".achievements-section").offset().top - 500
+      ) {
+        $(".achievement-value span").each(function () {
+          $(this)
+            .prop("Counter", 0)
+            .animate(
+              {
+                Counter: $(this).text(),
+              },
+              {
+                duration: 1500,
+                easing: "swing",
+                step: function (now) {
+                  $(this).text(Math.ceil(now));
+                },
+              }
+            );
+        });
+        a++;
+      }
+    });
+  }
   /************************************ Services Sliders ************************************/
   var servicesSwiper = new Swiper(".services-slider .swiper", {
     loop: true,

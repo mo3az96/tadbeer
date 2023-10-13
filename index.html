@@ -16,7 +16,20 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
-  <body>
+  <body class="overflow">
+    <div class="preloader">
+      <div class="preloader-flex">
+        <div class="preloader-logo-cont">
+          <div class="colored">
+            <img src="images/logo.png" class="img-fluid" />
+          </div>
+          <div class="filterd">
+            <img src="images/logo.png" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- start Header -->
     <header>
       <div class="container">
@@ -27,7 +40,7 @@
           <div class="menu-overlay"></div>
           <nav class="header-nav">
             <div class="nav-head">
-              <a href="#!" class="lang">
+              <a href="en/index.html" class="lang">
                 <div class="lang-flag">
                   <img src="images/lang/en.svg" class="img-fluid" />
                 </div>
@@ -92,7 +105,7 @@
             </div>
           </nav>
           <div class="header-tools">
-            <a href="#!" class="lang">
+            <a href="en" class="lang">
               <div class="lang-flag">
                 <img src="images/lang/en.svg" class="img-fluid" />
               </div>
@@ -187,37 +200,43 @@
       <img src="images/patterns/about.png" class="pattern" />
       <div class="container">
         <div class="section-head mobile-head">
-          <h2 class="section-title">
+          <h2 class="section-title" data-sal="slide-up">
             <img src="images/icons/title.png" />
             نبذة عن تديبر
           </h2>
         </div>
         <div class="about-content">
           <div class="about-img">
-            <div class="img-here">
+            <div class="img-here" data-sal="zoom-in">
               <img src="images/about/1.jpg" class="img-fluid" />
             </div>
-            <div class="about-logo">
+            <div
+              class="about-logo"
+              data-sal="zoom-in"
+              style="--sal-delay: 0.2s"
+            >
               <img src="images/logo.png" class="img-fluid" />
             </div>
           </div>
           <div class="about-text">
             <div class="section-head">
-              <h2 class="section-title">
+              <h2 class="section-title" data-sal="slide-up">
                 <img src="images/icons/title.png" />
                 نبذة عن تديبر
               </h2>
             </div>
             <div class="about-summary">
-              <p>
+              <p data-sal="slide-up" style="--sal-delay: 0.1s">
                 تأسست جمعية تدبير لحفظ النعمة كمنظمة غير ربحية ملتزمة بمهمتها
                 الرئيسية في مساعدة المجتمع والبيئة من خلال مجموعة من الخدمات
                 والأنشطة الهادفة. تهدف الجمعية إلى توعية الجمهور بأضرار الهدر
                 الغذائي والعيني، وتعزيز الوعي بأهمية الحفاظ على الطعام والموارد
                 الطبيعية.
               </p>
-              <p>خدمات جمعية تدبير لحفظ النعمة تشمل:</p>
-              <ol>
+              <p data-sal="slide-up" style="--sal-delay: 0.2s">
+                خدمات جمعية تدبير لحفظ النعمة تشمل:
+              </p>
+              <ol data-sal="slide-up" style="--sal-delay: 0.3s">
                 <li>
                   التوعية بأضرار الهدر الغذائي والعيني: تقوم الجمعية بتنظيم
                   حملات توعية وورش عمل للشباب والأسر حول أهمية تقليل الهدر
@@ -230,7 +249,11 @@
                 </li>
               </ol>
             </div>
-            <div class="section-more">
+            <div
+              class="section-more"
+              data-sal="slide-up"
+              style="--sal-delay: 0.4s"
+            >
               <a href="#!" class="more-link"> عرض المزيد </a>
             </div>
           </div>
@@ -247,7 +270,7 @@
       <div class="container">
         <div class="achievements-content">
           <div class="section-head">
-            <h2 class="section-title">
+            <h2 class="section-title" data-sal="slide-down">
               <img src="images/icons/title.png" />
               إنجازاتنا
             </h2>
@@ -323,15 +346,23 @@
       <div class="container">
         <div class="services-content">
           <div class="section-head">
-            <h2 class="section-title">
+            <h2 class="section-title" data-sal="slide-down">
               <img src="images/icons/title.png" />
               خدماتنا
             </h2>
-            <div class="section-more">
+            <div
+              class="section-more"
+              data-sal="flip-up"
+              style="--sal-delay: 0.2s"
+            >
               <a href="#!" class="more-link"> عرض كل الخدمات </a>
             </div>
           </div>
-          <div class="services-slider">
+          <div
+            class="services-slider"
+            data-sal="slide-up"
+            style="--sal-delay: 0.4s"
+          >
             <div class="swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -439,7 +470,7 @@
               </div>
             </div>
           </div>
-          <div class="section-more mobile-link">
+          <div class="section-more mobile-link" data-sal="slide-up">
             <a href="#!" class="more-link"> عرض كل الخدمات </a>
           </div>
         </div>
@@ -455,15 +486,23 @@
       <div class="container">
         <div class="projects-content">
           <div class="section-head">
-            <h2 class="section-title">
+            <h2 class="section-title" data-sal="slide-down">
               <img src="images/icons/title.png" />
               مشاريعنا
             </h2>
-            <div class="section-more">
+            <div
+              class="section-more"
+              data-sal="flip-up"
+              style="--sal-delay: 0.2s"
+            >
               <a href="#!" class="more-link"> عرض كل المشاريع </a>
             </div>
           </div>
-          <div class="projects-slider">
+          <div
+            class="projects-slider"
+            data-sal="slide-up"
+            style="--sal-delay: 0.4s"
+          >
             <div class="swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -548,7 +587,7 @@
               </div>
             </div>
           </div>
-          <div class="section-more mobile-link">
+          <div class="section-more mobile-link" data-sal="slide-up">
             <a href="#!" class="more-link"> عرض كل المشاريع </a>
           </div>
         </div>
@@ -562,15 +601,19 @@
       <div class="container">
         <div class="news-content">
           <div class="section-head">
-            <h2 class="section-title">
+            <h2 class="section-title" data-sal="slide-down">
               <img src="images/icons/title.png" />
               الأخبار
             </h2>
-            <div class="section-more">
+            <div
+              class="section-more"
+              data-sal="flip-up"
+              style="--sal-delay: 0.2s"
+            >
               <a href="#!" class="more-link"> عرض كل الأخبار </a>
             </div>
           </div>
-          <div class="news-grid">
+          <div class="news-grid" data-sal="slide-up" style="--sal-delay: 0.4s">
             <div class="news-item">
               <img src="images/patterns/news.png" class="pattern" />
               <a href="#!" class="news-img">
@@ -667,7 +710,7 @@
               </div>
             </div>
           </div>
-          <div class="section-more mobile-link">
+          <div class="section-more mobile-link" data-sal="slide-up">
             <a href="#!" class="more-link"> عرض كل الأخبار </a>
           </div>
         </div>
@@ -680,15 +723,23 @@
       <div class="container">
         <div class="gallery-content">
           <div class="section-head">
-            <h2 class="section-title">
+            <h2 class="section-title" data-sal="slide-down">
               <img src="images/icons/title.png" />
               المركز الإعلامي
             </h2>
-            <div class="section-more">
+            <div
+              class="section-more"
+              data-sal="flip-up"
+              style="--sal-delay: 0.2s"
+            >
               <a href="#!" class="more-link"> مشاهدة الكل </a>
             </div>
           </div>
-          <div class="gallery-slider">
+          <div
+            class="gallery-slider"
+            data-sal="slide-up"
+            style="--sal-delay: 0.4s"
+          >
             <div class="swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -775,7 +826,7 @@
               </div>
             </div>
           </div>
-          <div class="section-more mobile-link">
+          <div class="section-more mobile-link" data-sal="slide-up">
             <a href="#!" class="more-link"> مشاهدة الكل </a>
           </div>
         </div>
@@ -787,7 +838,7 @@
     <section class="contact-section">
       <div class="container">
         <div class="contact-content">
-          <div class="contact-form">
+          <div class="contact-form" data-sal="flip-right">
             <div class="section-head">
               <h2 class="section-title">
                 <img src="images/icons/title.png" />
@@ -824,7 +875,11 @@
               <button class="form-submit more-link">إرسال</button>
             </form>
           </div>
-          <div class="contact-map">
+          <div
+            class="contact-map"
+            data-sal="flip-left"
+            style="--sal-delay: 0.2s"
+          >
             <div class="map">
               <iframe
                 class="gmap_iframe"
@@ -848,7 +903,7 @@
         <div class="footer">
           <div class="row">
             <div class="col-xl-3 col-12">
-              <div class="footer-about">
+              <div class="footer-about" data-sal="slide-up">
                 <div class="footer-logo">
                   <img src="images/logo-footer.png" class="img-fluid" />
                 </div>
@@ -897,7 +952,11 @@
               </div>
             </div>
             <div class="col-xl-3 col-md-4">
-              <div class="footer-links">
+              <div
+                class="footer-links"
+                data-sal="slide-up"
+                style="--sal-delay: 0.2s"
+              >
                 <h3 class="footer-title">تعرف على الجمعية</h3>
                 <ul class="links-list footer-list">
                   <li>
@@ -916,7 +975,11 @@
               </div>
             </div>
             <div class="col-xl-3 col-md-4">
-              <div class="footer-links">
+              <div
+                class="footer-links"
+                data-sal="slide-up"
+                style="--sal-delay: 0.4s"
+              >
                 <h3 class="footer-title">روابط اخري</h3>
                 <ul class="links-list footer-list">
                   <li>
@@ -935,7 +998,11 @@
               </div>
             </div>
             <div class="col-xl-3 col-md-4">
-              <div class="footer-contacts">
+              <div
+                class="footer-contacts"
+                data-sal="slide-up"
+                style="--sal-delay: 0.6s"
+              >
                 <h3 class="footer-title">اتصل بالجمعية</h3>
                 <ul class="contacts-list footer-list">
                   <li class="contact-method">
